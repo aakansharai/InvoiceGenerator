@@ -1,0 +1,209 @@
+{
+  "AIR" : {
+    "tripInfos" : [
+      {
+        "sI" : [
+          {
+            "id" : "139520" ,
+            "fD" : {
+              "aI" : {
+                "code" : "6E" ,
+                "name" : "IndiGo" ,
+                "isLcc" : true
+              } ,
+              "fN" : "7175" ,
+              "eT" : "ATR"
+            } ,
+            "stops" : 0 ,
+            "duration" : 55 ,
+            "cT" : 85 ,
+            "da" : {
+              "code" : "IDR" ,
+              "name" : "Devi Ahilya Bai Holkar Arpt" ,
+              "cityCode" : "IDR" ,
+              "city" : "Indore" ,
+              "country" : "India" ,
+              "countryCode" : "IN"
+            } ,
+            "aa" : {
+              "code" : "AMD" ,
+              "name" : "Sardar Vallabh Bhai Patel Intl Arpt" ,
+              "cityCode" : "AMD" ,
+              "city" : "Ahmedabad" ,
+              "country" : "India" ,
+              "countryCode" : "IN" ,
+              "terminal" : "Terminal 1"
+            } ,
+            "dt" : "2023-08-13T06:45" ,
+            "at" : "2023-08-13T07:40" ,
+            "iand" : false ,
+            "isRs" : false ,
+            "sN" : 0
+          } ,
+          {
+            "id" : "139521" ,
+            "fD" : {
+              "aI" : {
+                "code" : "6E" ,
+                "name" : "IndiGo" ,
+                "isLcc" : true
+              } ,
+              "fN" : "265" ,
+              "eT" : "320"
+            } ,
+            "stops" : 0 ,
+            "duration" : 110 ,
+            "da" : {
+              "code" : "AMD" ,
+              "name" : "Sardar Vallabh Bhai Patel Intl Arpt" ,
+              "cityCode" : "AMD" ,
+              "city" : "Ahmedabad" ,
+              "country" : "India" ,
+              "countryCode" : "IN" ,
+              "terminal" : "Terminal 1"
+            } ,
+            "aa" : {
+              "code" : "SXR" ,
+              "name" : "Srinagar Arpt" ,
+              "cityCode" : "SXR" ,
+              "city" : "Srinagar" ,
+              "country" : "India" ,
+              "countryCode" : "IN"
+            } ,
+            "dt" : "2023-08-13T09:05" ,
+            "at" : "2023-08-13T10:55" ,
+            "iand" : false ,
+            "isRs" : false ,
+            "sN" : 1
+          }
+        ]
+      } ,
+      {
+        "sI" : [
+          {
+            "id" : "139522" ,
+            "fD" : {
+              "aI" : {
+                "code" : "6E" ,
+                "name" : "IndiGo" ,
+                "isLcc" : true
+              } ,
+              "fN" : "6655" ,
+              "eT" : "320"
+            } ,
+            "stops" : 0 ,
+            "duration" : 95 ,
+            "cT" : 120 ,
+            "da" : {
+              "code" : "SXR" ,
+              "name" : "Srinagar Arpt" ,
+              "cityCode" : "SXR" ,
+              "city" : "Srinagar" ,
+              "country" : "India" ,
+              "countryCode" : "IN"
+            } ,
+            "aa" : {
+              "code" : "DEL" ,
+              "name" : "Delhi Indira Gandhi Intl" ,
+              "cityCode" : "DEL" ,
+              "city" : "Delhi" ,
+              "country" : "India" ,
+              "countryCode" : "IN" ,
+              "terminal" : "Terminal 1"
+            } ,
+            "dt" : "2023-08-16T11:45" ,
+            "at" : "2023-08-16T13:20" ,
+            "iand" : false ,
+            "isRs" : true ,
+            "sN" : 0
+          } ,
+          {
+            "id" : "139523" ,
+            "fD" : {
+              "aI" : {
+                "code" : "6E" ,
+                "name" : "IndiGo" ,
+                "isLcc" : true
+              } ,
+              "fN" : "6241" ,
+              "eT" : "320"
+            } ,
+            "stops" : 0 ,
+            "duration" : 85 ,
+            "da" : {
+              "code" : "DEL" ,
+              "name" : "Delhi Indira Gandhi Intl" ,
+              "cityCode" : "DEL" ,
+              "city" : "Delhi" ,
+              "country" : "India" ,
+              "countryCode" : "IN" ,
+              "terminal" : "Terminal 1"
+            } ,
+            "aa" : {
+              "code" : "IDR" ,
+              "name" : "Devi Ahilya Bai Holkar Arpt" ,
+              "cityCode" : "IDR" ,
+              "city" : "Indore" ,
+              "country" : "India" ,
+              "countryCode" : "IN"
+            } ,
+            "dt" : "2023-08-16T15:20" ,
+            "at" : "2023-08-16T16:45" ,
+            "iand" : false ,
+            "isRs" : true ,
+            "sN" : 1
+          }
+        ]
+      }
+    ] ,
+    "travellerInfos" : [
+      {
+        "pnrDetails" : {
+          "IDR-AMD" : "TESTPNR" ,
+          "AMD-SXR" : "TESTPNR" ,
+          "SXR-DEL" : "TESTPNR" ,
+          "DEL-IDR" : "TESTPNR"
+        } ,
+        "ti" : "Mr" ,
+        "pt" : "ADULT" ,
+        "fN" : "Meet" ,
+        "lN" : "Vani" ,
+        "dob" : "1999-03-29"
+      },
+      {
+        "pnrDetails" : {
+          "IDR-AMD" : "TESTPNR" ,
+          "AMD-SXR" : "TESTPNR" ,
+          "SXR-DEL" : "TESTPNR" ,
+          "DEL-IDR" : "TESTPNR"
+        } ,
+        "ti" : "Ms" ,
+        "pt" : "ADULT" ,
+        "fN" : "Aakansha" ,
+        "lN" : "Rai" ,
+        "dob" : "1999-03-29"
+      }
+    ] ,
+    "totalPriceInfo" : {
+      "totalFareDetail" : {
+        "fC" : {
+          "IGST" : 5.40 ,
+          "NF" : 17292.40 ,
+          "BF" : 15003.00 ,
+          "TAF" : 2289.40 ,
+          "TF" : 17292.40
+        } ,
+        "afC" : {
+          "TAF" : {
+            "OT" : 1493.00 ,
+            "YQ" : 0.00 ,
+            "MF" : 30.00 ,
+            "AGST" : 761.00 ,
+            "MFT" : 5.40
+          }
+        }
+      }
+    } ,
+    "isara" : false
+  }
+}

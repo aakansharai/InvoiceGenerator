@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anaheim"
+            android:text="Booking Id :"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/idText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/arimo"
+            android:text="IF534554"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="@+id/idText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/headerContainer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:isScrollContainer="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerForPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textReturn" />
+
+            <TextView
+                android:id="@+id/textReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:fontFamily="@font/arimo"
+                android:text="Return "
+                android:textColor="@color/blackLight"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="25dp"
+                android:paddingBottom="60dp"
+                android:paddingTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerForPayment">
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/l1background"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/taxBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/l2background">
+
+                        <TextView
+                            android:id="@+id/farebreak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:text="Fare Breakup"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/relative2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/taxBox"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/baseprice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Base Price"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/basePrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="3dp"
+                            android:text="₹ 6070"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+
+                        <TextView
+                            android:id="@+id/AirlineTaxAndFeeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/baseprice1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Airline Taxes and Fees"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/AirlineTaxAndFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/basePrice"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="3dp"
+                            android:text="₹ 1559"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/AirlineTaxAndFeeTitle"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Conveniennce Fee"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/ConvenientFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/AirlineTaxAndFee"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="3dp"
+                            android:text="₹ 489"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relative2"
+                        android:background="@drawable/l2background"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/off1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Instant off"
+                            android:textColor="#4CAF50"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/InstantOff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="3dp"
+                            android:text="₹ 1000"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/off1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Paid"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/totalFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/InstantOff"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="3dp"
+                            android:text="₹ 7118"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/importance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arimo"
+                    android:text="Importance Information"
+                    android:textColor="@color/blackLight"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/importance"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/arimo"
+                    android:text="• Please note that for all domestic flights,\n   check-in counters close 60 minutes prior to \n  flight departure."
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/importance"
+                    app:layout_constraintTop_toBottomOf="@+id/importance" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/info1"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/arimo"
+                    android:text="• It is mandatory for the passenger to carry a\n  valid photo ID proof. Permissible ID proofs \n  include - Aadhaar Card, Passport or any other \n government recognized ID proof. For infant \n  travellers (0-2 yrs), it is mandatory to carry \n  the birth certificate as a proof."
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/info1"
+                    app:layout_constraintTop_toBottomOf="@+id/info1" />
+
+                <TextView
+                    android:id="@+id/info3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/info2"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/arimo"
+                    android:text="• Kindly carry a copy of your e-ticket on a \n  tablet/ mobile/ laptop or a printed copy of the \n  ticket to enter the airport and show at the \n  time of check-in."
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/info2"
+                    app:layout_constraintTop_toBottomOf="@+id/info2" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relative3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/info3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/info3">
+
+                    <TextView
+                        android:id="@+id/cancelinnfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/arimo"
+                        android:text="Cancellation Innformation"
+                        android:textColor="@color/blackLight"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/cancel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cancelinnfo"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/arimo"
+                        android:text="• For any queries with ixigo regarding this booking,please use the Booking ID as\n   a reference."
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/cancel2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cancel1"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/arimo"
+                        android:text="• Please note that for all domestic flights, check-in counters close 60 minutes\n   prior to flight departure"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/cancel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cancel2"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/arimo"
+                        android:text="• It is mandatory for the passenger to carry a valid photo ID proof. Permissible\n   ID proofs include - Aadhaar Card, Passport or any other government recognized \n  ID proof. For infant travellers (0-2 yrs),it is mandatory to carry the birth certificate\n   as a proof."
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/greDark"
+                    app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/relative3" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative3"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/relative3">
+
+                    <TextView
+                        android:id="@+id/trip1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TripzyGo Support"
+                        android:textSize="10dp" />
+
+
+                    <TextView
+                        android:id="@+id/chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="3dp"
+                        android:layout_below="@id/trip1"
+                        android:text="Chat :"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/trip3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chat"
+                        android:text="Helpline :"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/trip4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="Airline Support"
+                        android:textSize="10dp" />
+
+
+                    <TextView
+                        android:id="@+id/trip5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/trip4"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="Vistara : 09928992 8888"
+                        android:textSize="10dp" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
