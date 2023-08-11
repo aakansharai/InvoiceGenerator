@@ -258,7 +258,8 @@ public class MainActivity extends AppCompatActivity {
         JsonObject jsonObject = gson.fromJson(data, new TypeToken<JsonObject>() {
         }.getType());
 
-        JsonArray jsonElements = jsonObject.getAsJsonObject("AIR").getAsJsonArray("tripInfos").get(0).getAsJsonObject().getAsJsonArray("sI");
+        JsonArray jsonElements = jsonObject.getAsJsonObject("AIR").getAsJsonArray("tripInfos").
+                get(0).getAsJsonObject().getAsJsonArray("sI");
         JsonArray length = jsonObject.getAsJsonObject("AIR").getAsJsonArray("tripInfos");
 
         JsonArray travellersInfo = jsonObject.getAsJsonObject("AIR").getAsJsonArray("travellerInfos");
